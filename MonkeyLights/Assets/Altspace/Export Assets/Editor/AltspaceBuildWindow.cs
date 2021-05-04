@@ -2493,35 +2493,35 @@ public class AltspaceBuildWindow : EditorWindow
     public void SendErrorMessageToSlack(string errorMessage)
     {
 
-        //ShowNotification(new GUIContent(errorMessage));
+        ShowNotification(new GUIContent(errorMessage));
 
-        //string envPath = Application.dataPath + Path.DirectorySeparatorChar + "Plugins";
+        string envPath = Application.dataPath + Path.DirectorySeparatorChar + "Plugins";
 
-        //var cmd = new StringBuilder();
-        //cmd.Append("curl -X POST --data-urlencode \"payload={\\\"channel\\\": \\\"#unity-uploader-errors\\\", \\\"username\\\": \\\"webhookbot\\\", \\\"text\\\": \\\"")
-        //    .Append(errorMessage)
-        //    .Append("\\\"}\" ")
-        //    .Append("https://hooks.slack.com/services/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");
+        var cmd = new StringBuilder();
+        cmd.Append("curl -X POST --data-urlencode \"payload={\\\"channel\\\": \\\"#unity-uploader-errors\\\", \\\"username\\\": \\\"webhookbot\\\", \\\"text\\\": \\\"")
+            .Append(errorMessage)
+            .Append("\\\"}\" ")
+            .Append("https://hooks.slack.com/services/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");
 
-        //List<string> batCMDs = new List<string>();
+        List<string> batCMDs = new List<string>();
 
-        ////batCMDs.Add("echo off");
-        //batCMDs.Add(cmd.ToString());
+        //batCMDs.Add("echo off");
+        batCMDs.Add(cmd.ToString());
 
-        //if (File.Exists(envPath + Path.DirectorySeparatorChar + "error.bat"))
-        //{
-        //    File.Delete(envPath + Path.DirectorySeparatorChar + "error.bat");
-        //}
+        if (File.Exists(envPath + Path.DirectorySeparatorChar + "error.bat"))
+        {
+            File.Delete(envPath + Path.DirectorySeparatorChar + "error.bat");
+        }
 
-        //File.WriteAllLines(envPath + Path.DirectorySeparatorChar + "error.bat", batCMDs.ToArray());
+        File.WriteAllLines(envPath + Path.DirectorySeparatorChar + "error.bat", batCMDs.ToArray());
 
-       // var process = new System.Diagnostics.ProcessStartInfo();
-       // process.WorkingDirectory = envPath;
-       // process.FileName = "bash";
-        //process.Arguments = "-c \"source error.bat\"";
-       // System.Diagnostics.Process.Start(process);
+        var process = new System.Diagnostics.ProcessStartInfo();
+        process.WorkingDirectory = envPath;
+        process.FileName = "bash";
+        process.Arguments = "-c \"source error.bat\"";
+        System.Diagnostics.Process.Start(process);
 
-        //Debug.LogError(errorMessage);
+        Debug.LogError(errorMessage);
     }
 }
 #endif

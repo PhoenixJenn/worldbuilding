@@ -1,0 +1,19 @@
+newmtl Cracked Concrete 2
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm Reputation/Cracked Concrete 2_metallic.psd
+adobe_translucence 0
+map_Pr Reputation/Cracked Concrete 2_roughness.psd
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd Reputation/Cracked Concrete 2_baseColor.png
+norm Reputation/Cracked Concrete 2_normal.psd
+disp Reputation/Cracked Concrete 2_height.psd

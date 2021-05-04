@@ -1,0 +1,13 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: Elon's Tesla Roadster
+Author: Wilfredo Barrios
+URL: https://poly.google.com/view/8mcoPG2HFx5
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Elon's Tesla Roadster
+Author: Wilfredo Barrios
+URL: https://poly.google.com/view/8xXHtIV1pg0
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
